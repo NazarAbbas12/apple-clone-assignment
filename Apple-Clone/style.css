@@ -1,0 +1,410 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-container
+{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(217, 214, 214);
+}
+.navbar
+{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+.navbar-content
+{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.navbar-content span
+{
+    padding-top: 15px;
+    color: black;
+}
+.hero-section {
+    width: 100%;
+    padding-top: 70px; /* navbar height + spacing */
+}
+
+.hero-main {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+
+    position: relative; /* IMPORTANT FIX */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+/* IMAGE becomes background layer */
+.hero-main img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1000px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* CONTENT stays above image */
+.hero-content {
+    position: relative; /* changed from absolute */
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    text-align: center;
+    color: black;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-btn button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn1 {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.btn2 {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+}
+
+/*SECTION 2*/
+.section2 {
+    width: 100%;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.section2 h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.section2 h5 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.section2 p {
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.btnGroup button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btnGroup button:first-child {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.btnGroup button:last-child {
+    background-color: transparent;
+    color: blue;
+    border: 2px solid blue;
+}
+
+.section2 img {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+}
+
+
+.site-footer-links {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col h5 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.footer-col li {
+    margin-bottom: 6px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #6e6e73;
+}
+
+.site-footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #6e6e73;
+    border-top: 1px solid #ddd;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #6e6e73;
+}
+
+
+
+/* =========================
+   Large Tablets & Small Laptops
+   ========================= */
+   @media screen and (max-width: 1024px) {
+
+    .navbar-content {
+        width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .section2 h1 {
+        font-size: 42px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar-content {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navbar-content span {
+        display: none;
+    }
+
+    .hero-main img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+    .hero-content {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section2 {
+        padding: 40px 15px;
+    }
+
+    .section2 h1 {
+        font-size: 36px;
+    }
+
+    .section2 h5 {
+        font-size: 20px;
+    }
+
+    .section2 p {
+        width: 90%;
+    }
+
+    .btnGroup {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section2 img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    .hero-main img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* FIXED: avoid top shifting */
+    .hero-content {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-btn button {
+        width: 180px;
+    }
+
+    .section2 h1 {
+        font-size: 28px;
+    }
+
+    .section2 h5 {
+        font-size: 18px;
+    }
+
+    .section2 p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .btnGroup {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnGroup button {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .hero-main img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+    }
+
+    .hero-btn button {
+        width: 160px;
+        padding: 8px 15px;
+    }
+
+    .section2 h1 {
+        font-size: 24px;
+    }
+
+    .section2 h5 {
+        font-size: 16px;
+    }
+
+    .section2 p {
+        font-size: 13px;
+    }
+
+    .btnGroup button {
+        width: 160px;
+        padding: 8px 15px;
+    }
+}
